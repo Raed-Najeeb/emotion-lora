@@ -36,6 +36,9 @@ def load_model(model_type, device):
 
 
 def predict(text, model, tokenizer, device):
+    if not text.strip():
+        raise ValueError("Input text cannot be empty.")
+
     inputs = tokenizer(
         text,
         return_tensors="pt",
@@ -91,7 +94,7 @@ def main():
         for label, probability in zip(LABEL_NAMES, probabilities):
             print(f"  {label:10s} {probability:.2%}")
 
-    if args.text:
+    if args.text is not None:
         show_prediction(args.text)
         return
 
