@@ -143,3 +143,20 @@ The training scripts save evaluation metrics under `results/` and trained model 
 ## Tech Stack
 
 Python · PyTorch · Hugging Face Transformers · Hugging Face Datasets · PEFT · scikit-learn · CUDA
+
+## Automated Tests
+
+The project includes unit tests for the prediction function using lightweight mock objects, so the tests do not need to load the trained models or perform GPU inference.
+
+The tests check:
+- Predicted emotion labels are valid.
+- The model returns six class probabilities.
+- Probabilities sum to approximately 1.
+- Probabilities remain between 0 and 1.
+- Empty or whitespace-only input is rejected.
+
+Run the tests with:
+
+```bash
+python -m pytest tests/test_predict.py -v
+```
