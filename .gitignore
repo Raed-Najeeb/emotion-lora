@@ -4,5 +4,7 @@ __pycache__/
 .env
 data/*
 !data/.gitkeep
+models/
 results/*
 !results/.gitkeep
+!results/baseline_metrics.json
