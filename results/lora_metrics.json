@@ -1,0 +1,19 @@
+{
+  "test_loss": 0.19797278940677643,
+  "test_accuracy": 0.9165,
+  "test_macro_precision": 0.8724083051623587,
+  "test_macro_recall": 0.883314985604771,
+  "test_macro_f1": 0.8770932372635009,
+  "test_runtime": 0.9568,
+  "test_samples_per_second": 2090.281,
+  "test_steps_per_second": 65.844,
+  "epoch": 3.0,
+  "trainable_parameters": 742662,
+  "total_parameters": 67700748,
+  "trainable_percent": 1.0969775400413597,
+  "training_seconds": 65.86187130000326,
+  "lora_rank": 8,
+  "lora_alpha": 16,
+  "learning_rate": 0.0002,
+  "epochs": 3
+}
